@@ -28,6 +28,7 @@ body {
           flex-direction: column;
   min-height: 100vh;
   background-color: rgba(222, 222, 222, 0.5);
+  background-image: url(../assets/images/noise.png), url(../assets/images/bg.png);
   background-position: 0 0, 0 0;
   background-size: auto, 100% auto;
   background-repeat: repeat, repeat-y;
@@ -60,17 +61,38 @@ img {
   -o-object-fit: cover;
      object-fit: cover;
 }
+button {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  outline: none;
+  color: #1f1e1e;
+  font-family: "Open Sans", sans-serif;
+  cursor: pointer;
+}
 .button {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  text-decoration: none;
-  background-color: transparent;
   padding: 15px 40px;
   border: 1px solid #1f1e1e;
-  font-size: 16px;
-  line-height: normal;
-  font-weight: 600;
+  background-color: transparent;
+  outline: none;
   color: #1f1e1e;
+  font-weight: 620;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  text-decoration: none;
+  -webkit-transition: color 0.2s, background-color 0.2s, border-color 0.2s;
+  transition: color 0.2s, background-color 0.2s, border-color 0.2s;
+  overflow: hidden;
+  cursor: pointer;
+}
+.button:active {
+  background-color: #1f1e1e;
+  color: #ffffff;
 }
 .card-event {
   -webkit-box-sizing: border-box;
@@ -185,6 +207,48 @@ img {
 .listing__card-event {
   max-width: 405px;
   width: calc(33.333% - 40px);
+}
+.reserve {
+  display: grid;
+  gap: 65px 11%;
+  grid-template-columns: 405px calc(89% - 405px);
+  grid-template-areas: "checks scheme" "order legend";
+  width: 100%;
+}
+.reserve > div {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  background-color: #ff7f50;
+  text-align: center;
+}
+.reserve__checks {
+  grid-area: checks;
+}
+.reserve__order {
+  grid-area: order;
+}
+.reserve__scheme {
+  grid-area: scheme;
+}
+.reserve__legend {
+  grid-area: legend;
+}
+.title {
+  margin: 0 0 150px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 7px 45px 9px;
+  max-width: 624px;
+  width: 100%;
+  text-align: center;
+  background-color: #1f1e1e;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-family: "Lora";
+  font-style: normal;
+  font-size: 36px;
+  color: #ffffff;
 }
 .main-header {
   padding: 100px 0;
@@ -306,45 +370,9 @@ img {
   font-weight: 600;
   color: #1f1e1e;
 }
-.reserve {
-  display: grid;
-  gap: 65px 11%;
-  grid-template-columns: 405px calc(89% - 405px);
-  grid-template-areas: "checks scheme" "order legend";
-  width: 100%;
-}
-.reserve > div {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  padding: 10px;
-  background-color: #ff7f50;
-  text-align: center;
-}
-.reserve__checks {
-  grid-area: checks;
-}
-.reserve__order {
-  grid-area: order;
-}
-.reserve__scheme {
-  grid-area: scheme;
-}
-.reserve__legend {
-  grid-area: legend;
-}
-.title {
-  margin: 0 0 150px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  padding: 7px 45px 9px;
-  max-width: 624px;
-  width: 100%;
-  text-align: center;
-  background-color: #1f1e1e;
-  text-transform: uppercase;
-  font-weight: 500;
-  font-family: "Lora";
-  font-style: normal;
-  font-size: 36px;
-  color: #ffffff;
+@media (hover: hover) {
+  .button:hover {
+    background-color: #1f1e1e;
+    color: #ffffff;
+  }
 }
