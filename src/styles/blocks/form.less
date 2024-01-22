@@ -1,0 +1,74 @@
+.form {
+
+    &__title {
+        font-family: @font1;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 700;
+        margin: 0 0 15px;
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 30px;
+        column-gap: 60px;
+
+        &--mb50 {
+            margin-bottom: 50px;
+        }
+    }
+
+    &__group {
+        width: calc(50% - 30px);
+    }
+
+    &__field {
+        width: 100%;
+        display: block;
+        margin: 0 0 20px;
+
+        &--w50 {
+            width: calc(50% - 30px);
+        }
+
+        &--mb30 {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__check {
+        &--mb40 {
+            margin-bottom: 40px;
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    &__submit {
+        &--w50 {
+            width: calc(50% - 30px);
+        }
+    }
+
+    &__close-button {
+        margin: 0 auto;
+        padding: 4px 0;
+        border: none;
+        background: transparent;
+        color: @black;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 22px;
+        text-decoration: underline;
+        transition: color 0.2s;
+
+        &:hover {
+            color: @red;
+        }
+    }
+}
